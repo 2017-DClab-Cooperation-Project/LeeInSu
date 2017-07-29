@@ -19,6 +19,17 @@ function preload(){
        game.add.sprite(0, 0, 'score');
        
        box=game.add.group();
+       box.enableBody=true;
+       for(var i=0;, i<20; i++)
+       {
+       box.create(i*40, 80, "box").body.immovable=true;
+       box.create(i*40, 600-40, "box").body.immovable=true;
+       }
+       for (var j= 3; j<14; j++)
+       {
+       box.create(0, j*40, "box").body.immovable=true;
+       box.create(800-40, j*40, "box").body.immovable =true;
+       }
       }
       function update(){
       }
