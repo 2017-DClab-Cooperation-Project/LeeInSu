@@ -9,8 +9,12 @@
 <script type="text/javascript">
 var game=new Phaser.Game(800, 600, Phaser.CANVAS, null,
 {preload:preload, create:create, update:update});
+
+var box, player, inputKey;
+
 function preload(){
        game.load.image("box","./images/box.png")
+       game.load.image("player", "./images/player.png");
       }     
      function create(){
        game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -30,6 +34,8 @@ function preload(){
        box.create(0, j*40, "box").body.immovable=true;
        box.create(800-40, j*40, "box").body.immovable =true;
        }
+       player=games.add.sprite(400, 300, "player");
+       game.physics.arcade.enable(player);
       }
       function update(){
       }
