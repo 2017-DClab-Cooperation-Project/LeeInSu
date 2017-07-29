@@ -10,8 +10,15 @@
 var game=new Phaser.Game(800, 600, Phaser.CANVAS, null,
 {preload:preload, create:create, update:update});
 function preload(){
+       game.load.image("box","./images/box.png")
       }     
      function create(){
+       game.physics.startSystem(Phaser.Physics.ARCADE);
+       game.stage.backgroundColor="#2196F3";
+       game.create.texture('score', ['C'], 800, 80, 0);
+       game.add.sprite(0, 0, 'score');
+       
+       box=game.add.group();
       }
       function update(){
       }
