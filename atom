@@ -48,9 +48,17 @@ function preload(){
         player.body.velocity.x = -velocity;
         player.body.velocity.y = -velocity;
       }
-      else if(inputKey.left.isDown&& inputKey.down.isDown){
+      else if(inputKey.left.isDown && inputKey.down.isDown){
         player.body.velocity.x = -velocity;
         player.body.velocity.y = +velocity;
+      }
+      else if(inputKey.right.isDown && inputKey.up.isDown){        
+            player.body.velocity.x = +velocity;        
+            player.body.velocity.y = -velocity;      
+      }
+      else if(inputKey.right.isDown&& inputKey.down.isDown){        
+            player.body.velocity.x = +velocity;        
+            player.body.velocity.y = +velocity;      
       }
       </script>
       </body>
