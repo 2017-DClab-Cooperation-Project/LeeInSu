@@ -36,8 +36,14 @@ function preload(){
        }
        player=games.add.sprite(400, 300, "player");
        game.physics.arcade.enable(player);
+       
+       inputKey=game.input.keyboard.createCursorKeys();
       }
       function update(){
+      var velocity=200;
+      
+      player.body.velocity.setTo(0, 0);
+      
       }
       </script>
       </body>
