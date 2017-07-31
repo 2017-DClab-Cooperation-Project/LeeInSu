@@ -53,13 +53,20 @@ function preload(){
         player.body.velocity.y = +velocity;
       }
       else if(inputKey.right.isDown && inputKey.up.isDown){        
-            player.body.velocity.x = +velocity;        
-            player.body.velocity.y = -velocity;      
+        player.body.velocity.x = +velocity;        
+        player.body.velocity.y = -velocity;      
       }
       else if(inputKey.right.isDown&& inputKey.down.isDown){        
-            player.body.velocity.x = +velocity;        
-            player.body.velocity.y = +velocity;      
+        player.body.velocity.x = +velocity;        
+        player.body.velocity.y = +velocity;      
       }
+      else if(inputKey.left.isDown){
+        player.body.velocity.x = -velocity;
+      }
+      else if(inputKey.right.isDown){
+        player.body.velocity.x = +velocity;
+      }
+      
       </script>
       </body>
       </html>
