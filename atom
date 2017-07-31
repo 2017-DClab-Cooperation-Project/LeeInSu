@@ -40,9 +40,10 @@ function preload(){
        inputKey=game.input.keyboard.createCursorKeys();
       }
       function update(){
-      var velocity=200;
+       game.physics.arcade.collide(player, box)
+       var velocity=200;
       
-      player.body.velocity.setTo(0, 0);
+       player.body.velocity.setTo(0, 0);
       
       if (inputKey.left. isDown && inputKey.up.isDown){
         player.body.velocity.x = -velocity;
