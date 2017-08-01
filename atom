@@ -89,7 +89,12 @@ function preload(){
       box.forEachAlive(function(ballAlive)){
         ballAlive.push(ballAlive);
       });
-      
+      if(ballAlive&&ballArray.length>0){
+        var ballRandom=game.rnd.integerInRange(0, ballArray.length-1);
+        var ballBox=ballArray[ballRandom];
+        ballAlive.reset(ballBox.body.x, ballBox.body.y);
+        game.physics.arcade.moveToObject(ballAlive, player, 150);
+      }
     }
       </script>
       </body>
