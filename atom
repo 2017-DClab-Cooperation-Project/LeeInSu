@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>게임만들기</title>
-<script src="./js/phaser.js"></script>  
-</head>
-<body>
-<script type="text/javascript">
-var game=new Phaser.Game(800, 600, Phaser.CANVAS, null,
-{preload:preload, create:create, update:update});
+    <!DOCTYPE html>
+     <html>
+     <head>
+     <meta charset="utf-8">
+     <title>게임만들기</title>
+     <script src="./js/phaser.js"></script>  
+     </head>
+     <body>
+     <script type="text/javascript">
+     var game=new Phaser.Game(800, 600, Phaser.CANVAS, null,
+     {preload:preload, create:create, update:update});
 
-var box, player, inputKey, ball, ballAlive, score, score_Event;
+     var box, player, inputKey, ball, ballAlive, score, score_Event;
 
-var ballArray=[];
+     var ballArray=[];
 
-var playerLife=1;
-function preload(){
+     var playerLife=1;
+     function preload(){
        game.load.image("box","./images/box.png")
        game.load.image("player", "./images/player.png");
        game.load.image("ball", "./images/ball.png");
