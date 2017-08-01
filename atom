@@ -62,6 +62,7 @@ function preload(){
       
        player.body.velocity.setTo(0, 0);
       
+      
       if (inputKey.left. isDown && inputKey.up.isDown){
         player.body.velocity.x = -velocity;
         player.body.velocity.y = -velocity;
