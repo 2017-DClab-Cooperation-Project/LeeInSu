@@ -10,11 +10,14 @@
 var game=new Phaser.Game(800, 600, Phaser.CANVAS, null,
 {preload:preload, create:create, update:update});
 
-var box, player, inputKey;
+var box, player, inputKey, ball, ballAlive;
+
+var ballArray=[];
 
 function preload(){
        game.load.image("box","./images/box.png")
        game.load.image("player", "./images/player.png");
+       game.load.image("ball", "./images/ball.png");
       }     
      function create(){
        game.physics.startSystem(Phaser.Physics.ARCADE);
