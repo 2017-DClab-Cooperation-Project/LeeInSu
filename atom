@@ -1,12 +1,12 @@
-    <!DOCTYPE html>
-     <html>
-     <head>
-     <meta charset="utf-8">
-     <title>게임만들기</title>
-     <script src="./js/phaser.js"></script>  
-     </head>
-     <body>
-     <script type="text/javascript">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>게임만들기</title>
+    <script src="./js/phaser.js"></script>  
+  </head>
+  <body>
+    <script type="text/javascript">
      var game=new Phaser.Game(800, 600, Phaser.CANVAS, null,
      {preload:preload, create:create, update:update});
 
@@ -120,8 +120,8 @@
         game.physics.arcade.moveToObject(ballAlive, player, 150);
       }
     }
-      </script>
-      </body>
-      </html>
+    </script>
+  </body>
+</html>
 
 
