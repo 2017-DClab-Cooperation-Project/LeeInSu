@@ -55,6 +55,9 @@ function preload(){
        game.physics.arcade.overlap(score, ball, function(sky, ball){
          ball.kill();
        }, null, this);
+       gmae.physics.arcade.overlap(player, ball, funtion(player, ball){
+         ball,kill();
+       }, null, this);
        var velocity=200;
       
        player.body.velocity.setTo(0, 0);
