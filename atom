@@ -40,6 +40,11 @@ function preload(){
        player=games.add.sprite(400, 300, "player");
        game.physics.arcade.enable(player);
        
+       ball=game.add.group();
+       ball.enableBody=true;
+       ball.physicsBodyType=Phaser.physics.ARCADE;
+       ball.createMultiple(30, "ball");
+       
        inputKey=game.input.keyboard.createCursorKeys();
       }
       function update(){
