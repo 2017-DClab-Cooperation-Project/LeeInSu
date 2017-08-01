@@ -44,6 +44,9 @@ function preload(){
        ball.enableBody=true;
        ball.physicsBodyType=Phaser.physics.ARCADE;
        ball.createMultiple(30, "ball");
+       ball.setAll("outOfBoudskill", true);
+       ball.setAll("checkWorldBounds", true);
+       
        
        inputKey=game.input.keyboard.createCursorKeys();
       }
