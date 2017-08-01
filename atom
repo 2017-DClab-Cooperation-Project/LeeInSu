@@ -10,7 +10,7 @@
 var game=new Phaser.Game(800, 600, Phaser.CANVAS, null,
 {preload:preload, create:create, update:update});
 
-var box, player, inputKey, ball, ballAlive;
+var box, player, inputKey, ball, ballAlive, score, score_Event;
 
 var ballArray=[];
 
@@ -50,6 +50,10 @@ function preload(){
        
        
        inputKey=game.input.keyboard.createCursorKeys();
+       var score_text=game.add.text(20, 10, "SCORE 0",
+       {fontSize:"50px", fill:"#FFFFFF"});
+       score_Event=game.time.events.loop(Phaser.Timer.SECOND,
+       function() {score_num++;score_text.setText("SCORE"+score_num);}, this);
       }
       function update(){
        game.physics.arcade.collide(player, box)
@@ -58,14 +62,18 @@ function preload(){
        }, null, this);
        gmae.physics.arcade.overlap(player, ball, funtion(player, ball){
          ball,kill();
+         playerLife--;
        }, null, this);
        
        player.body.velocity.serTo(0,0);
        
-       if(playerLife<1) return;
+       if(playerLife<1) {
+         game.time.events.remove(score_Event);
+         return;
+       }
        var velocity=200;
       
-       player.body.velocity.setTo(0, 0);
+     
       
       
       if (inputKey.left. isDown && inputKey.up.isDown){
