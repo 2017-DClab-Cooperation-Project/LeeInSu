@@ -62,7 +62,7 @@
        gameover_Text.visible=false;
       }
       function update(){
-       var velocity=200;
+       var velocity=350;
        game.physics.arcade.collide(player, box)
        game.physics.arcade.overlap(score, ball, function(sky, ball){
          ball.kill();
