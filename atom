@@ -30,7 +30,7 @@
        
        box=game.add.group();
        box.enableBody=true;
-       for(var i=0;, i<20; i++)
+       for(var i=0; i<20; i++)
        {
        box.create(i*40, 80, "box").body.immovable=true;
        box.create(i*40, 600-40, "box").body.immovable=true;
