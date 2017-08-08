@@ -16,7 +16,7 @@
 
      var playerLife=1;
      function preload(){
-       game.load.image("box","./images/box.png")
+       game.load.image("box","./images/box.png");
        game.load.image("player", "./images/player.png");
        game.load.image("ball", "./images/ball.png");
       }     
@@ -47,7 +47,7 @@
        ball.enableBody=true;
        ball.physicsBodyType=Phaser.physics.ARCADE;
        ball.createMultiple(30, "ball");
-       ball.setAll("outOfBoudskill", true);
+       ball.setAll("outOfBoudsKill", true);
        ball.setAll("checkWorldBounds", true);
        
        
