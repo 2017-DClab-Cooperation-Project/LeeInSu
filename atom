@@ -47,7 +47,7 @@
        ball.enableBody=true;
        ball.physicsBodyType=Phaser.physics.ARCADE;
        ball.createMultiple(30, "ball");
-       ball.setAll("outOfBoudsKill", true);
+       ball.setAll("outOfBoundsKill", true);
        ball.setAll("checkWorldBounds", true);
        
        
