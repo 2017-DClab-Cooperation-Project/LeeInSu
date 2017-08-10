@@ -57,7 +57,7 @@
        score_Event=game.time.events.loop(Phaser.Timer.SECOND,
        function() {score_num++;score_text.setText("SCORE"+score_num);}, this);
        gameover_Text=game.add.text(game.world.centerX, game.world.centerY, "GAME OVER",
-       {fontSize:"80px", fill:"#FFFFFF});
+       {fontSize:"80px", fill:"#FFFFFF"});
        gameover_Text.anchor.setTo(0.5,0.5);
        gameover_Text.visible=false;
       }
