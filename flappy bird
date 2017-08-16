@@ -16,11 +16,15 @@
     function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.stage.backgroundColor = '#71c5cf';
+    this.bird = game.add.sprite(100, 245, 'bird');
+    game.physics.arcade.enable(this.bird);
+    this.bird.body.gravity.y = 1000;
 
     
     }
     function update() {
-    
+    if (this.bird.y < 0 || this.bird.y > 490)
+    this.restartGame();
     }
    </script>
   </body>
