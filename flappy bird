@@ -10,6 +10,13 @@
     var game=new Phaser.game(800, 600, Phaser. CANVAS, null,
     {preload:preload, create:create, update:update});
     var bird;
+    jump: function() {
+    this.bird.body.velocity.y = -350;
+    }
+    restartGame: function() {
+    game.state.start('main');
+    }
+    
     function preload() {    
     game.load.image("bird","./images/bird.png");
     }
