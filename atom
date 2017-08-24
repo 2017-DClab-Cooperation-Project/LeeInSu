@@ -15,6 +15,10 @@
      var ballArray=[];
 
      var playerLife=1;
+     var GlobezGame = GlobezGame || {};
+     GlobezGame.GameTitle = function(){
+      startGame =false;
+     };
      function preload(){
        game.load.image("box","./images/box.png");
        game.load.image("player", "./images/player.png");
