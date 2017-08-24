@@ -19,6 +19,10 @@
      GlobezGame.GameTitle = function(){
       startGame =false;
      };
+     GlobezGame.GameTitle.prototype = {
+        create: function(){
+         console.log("%cStarting game title","color:white; background:red");
+        this.add.image(0,0,"background");
      function preload(){
        game.load.image("box","./images/box.png");
        game.load.image("player", "./images/player.png");
