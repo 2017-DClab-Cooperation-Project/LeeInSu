@@ -24,7 +24,7 @@
          console.log("%cStarting game title","color:white; background:red");
         this.add.image(0,0,"background");
          var gameTitlegame = this.add.image(190,120,"gametitle_game");
-          gameTitlegmae.anchor.setTo(0.5,0.5);
+          gameTitlegame.anchor.setTo(0.5,0.5);
      function preload(){
        game.load.image("box","./images/box.png");
        game.load.image("player", "./images/player.png");
