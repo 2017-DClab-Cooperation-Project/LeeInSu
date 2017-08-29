@@ -130,7 +130,7 @@
       ballAlive=ball.getFirstExists(false);
       ballArray.length=0;
       box.forEachAlive(function(ballAlive){
-        ballAlive.push(ballAlive);
+        ballArray.push(ballAlive);
       });
       if(ballAlive&&ballArray.length>0){
         var ballRandom=game.rnd.integerInRange(0, ballArray.length-1);
