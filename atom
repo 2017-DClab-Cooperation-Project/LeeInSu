@@ -54,7 +54,7 @@
        for (var j= 3; j<14; j++)
        {
        box.create(0, j*40, "box").body.immovable=true;
-       box.create(800-40, j*40, "box").body.immovable =true;
+       box.create(800, j*40, "box").body.immovable =true;
        }
        player=game.add.sprite(400, 300, "player");
        game.physics.arcade.enable(player);
